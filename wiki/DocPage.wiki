@@ -1,0 +1,25 @@
+#summary the documentation
+
+= Documentation =
+
+== How to insert the control in a page ==
+
+First, you need to include the file needed by the plugin:
+
+{{{
+<link rel="stylesheet" href="fpsfbmselect.css" type="text/css"/>
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="jquery.fpsfbmselect-1.0.js"></script>
+}}}
+
+Then you can add a control as easy as this:
+
+{{{
+<div id="mycontrol"></div>
+<script type="text/javascript">
+    $('#mycontrol').fpsFBMSelect({
+        'fieldName': 'myfield',
+        'variantsURL': 'http://some/url/for/retrieving/variants/'
+    });
+</script>
+}}}
