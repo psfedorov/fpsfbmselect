@@ -3,7 +3,7 @@
 
 == Simple Django widget that uses fpsFBMSelect ==
 
-{{{python
+{{{
 # coding: utf-8
 
 # example of Django widget that uses fpsFBMSelect plugin for jQuery.
