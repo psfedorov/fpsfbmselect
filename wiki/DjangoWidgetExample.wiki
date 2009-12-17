@@ -30,7 +30,7 @@ import uuid
 from django.forms.widgets import SelectMultiple
 # classes needed for rendering
 from django.template import Context, Template
-import logging
+
 
 class MSelectWidget(SelectMultiple):
     """
