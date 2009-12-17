@@ -23,3 +23,24 @@ Then you can add a control as easy as this:
     });
 </script>
 }}}
+
+Here's a list of available options:
+
+- fieldName - required - name for hidden fields which will contain selected values (string),
+- enableUserInput - enable adding of user values (boolean, by default - false),
+- userFieldName - name for hidden fields which will contain values added by user (string, by default - equals to a 'fieldName' argument),
+- selectedValues - preselected values which will be added to a multiselect container immediately (array of objects, by default - empty array),
+- cacheVariants - enable caching of variants (boolean, by default - false),
+- variantsURL - URL for getting variants with AJAX request (string, by default - empty string),
+- variants - if variantsURL is not set, this array of variants will be used (array of objects, by default - empty array),
+- useVariantFilter - enable client side filtering of variants (boolean, by default - false),
+- variantFilter - custom function for filtering variants on the client side (function, by default - null),
+- variantHTMLRenderer - custom function for rendering HTML for variants and selected values (function, by default - null),
+- maxDropDownHeight - maximum height of drop down element in pixels (number, by default - 200),
+- requestPause - pause in milliseconds before triggering AJAX requests (number, by default - 700),
+- requestArgumentName - the name of argument for an URL, which will contain the value of text input (string, by default - 'q'),
+- hintText - text of a hint in the drop down box (string, by default - 'Type and select from variants.'),
+- loadingHintText - text of a hint while loading variant with AJAX request (string, by default - 'Loading list...'),
+- userVariantHintText - text of a hint, which prepends user variant in the drop down box (string, by default - 'Add new value:'),
+- maxSelectedValues - maximum amount of values, which a user can select (number, by default - null, which means there's no limit),
+- focusAfterAddingValue - enable focusing of a text input after selecting a value (boolean, by default - false).
