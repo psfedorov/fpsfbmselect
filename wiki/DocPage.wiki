@@ -46,3 +46,7 @@ Here's a list of available options:
   * userVariantHintText - text of a hint, which prepends user variant in the drop down box (string, by default - 'Add new value:'),
   * maxSelectedValues - maximum amount of values, which a user can select (number, by default - null, which means there's no limit),
   * focusAfterAddingValue - enable focusing of a text input after selecting a value (boolean, by default - false).
+
+== Use example in Django ==
+
+You can find an example of a simple Django widget that uses fpsFBMSelect on the DjangoWidgetExample page.
