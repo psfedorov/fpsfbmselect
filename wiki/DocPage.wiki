@@ -24,6 +24,8 @@ Then you can add a control as easy as this:
 </script>
 }}}
 
+== Available options ==
+
 Here's a list of available options:
 
   * fieldName - required - name for hidden fields which will contain selected values (string),
