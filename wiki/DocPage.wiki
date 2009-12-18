@@ -47,6 +47,24 @@ Here's a list of available options:
   * maxSelectedValues - maximum amount of values, which a user can select (number, by default - null, which means there's no limit),
   * focusAfterAddingValue - enable focusing of a text input after selecting a value (boolean, by default - false).
 
+== JSON response format ==
+
+If you have provided 'variantsURL' parameter to the control, it will try to load variant list from that URL. By default, the JSON response from your server should be an array of objects and have the following format:
+
+{{{
+[
+    {'value': 1, 'title': 'One'},
+    {'value': 2, 'title': 'Two'},
+    {'value': 3, 'title': 'Three'}
+]
+}}}
+
+You may use as values not only integers, but strings too. That values will be placed in hidden fields when a user will select them.
+
+Titles are showed to a user and used to render variants and selected values.
+
+The variant objects may also have another attribute - 'orgn' (that means origin), which indicated whether a variant came from your system (when its value is 'sys') or from a user (when its value is 'user'). User and system variants will be shown slightly different. Also, if you have provided 'userFieldName' parameter to the control, then user variants will be inserted in hidden fields with that name.
+
 == Use example in Django ==
 
 You can find an example of a simple Django widget that uses fpsFBMSelect on the DjangoWidgetExample page.
