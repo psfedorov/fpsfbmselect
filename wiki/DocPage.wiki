@@ -71,4 +71,4 @@ You can find an example of a simple Django widget that uses fpsFBMSelect on the 
 
 == A note for PHP coders ==
 
-Please, remember, that if you want to find an array of selected values in `$_POST['yourfield']`, `$_GET['yourfield']` or `$_REQUEST['yourfield']`, you should render that field on the form like this: '`yourfield[]`'. This will tell PHP that 'yourfield' is an array.
+Please, remember, that if you want to find an array of selected values in `$_POST['yourfield']`, `$_GET['yourfield']` or `$_REQUEST['yourfield']`, you should render that field on the form with th name '`yourfield[]`'. This will tell PHP that 'yourfield' is an array.
