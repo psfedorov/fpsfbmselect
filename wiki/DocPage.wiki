@@ -4,7 +4,7 @@
 
 == How to insert the control in a page ==
 
-First, you need to include the file needed by the plugin:
+First, you need to include the files needed by the plugin:
 
 {{{
 <link rel="stylesheet" href="fpsfbmselect.css" type="text/css"/>
