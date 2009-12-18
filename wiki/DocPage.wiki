@@ -61,10 +61,14 @@ If you have provided 'variantsURL' parameter to the control, it will try to load
 
 You may use as values not only integers, but strings too. That values will be placed in hidden fields when a user will select them.
 
-Titles are showed to a user and used to render variants and selected values.
+Titles are shown to a user and used to render variants and selected values. They may contain not only plain text, but HTML code as well.
 
-The variant objects may also have another attribute - 'orgn' (that means origin), which indicated whether a variant came from your system (when its value is 'sys') or from a user (when its value is 'user'). User and system variants will be shown slightly different. Also, if you have provided 'userFieldName' parameter to the control, then user variants will be inserted in hidden fields with that name.
+The variant objects may also have another attribute - 'orgn' (that means 'origin'), which indicates whether a variant came from your system (when its value is 'sys') or from a user (when its value is 'user'). User and system variants will be shown slightly different. Also, if you have provided 'userFieldName' parameter to the control, then user variants will be inserted in hidden fields with that name.
 
-== Use example in Django ==
+== Example usage in Django ==
 
 You can find an example of a simple Django widget that uses fpsFBMSelect on the DjangoWidgetExample page.
+
+== A note for PHP coders ==
+
+Please, remember, that if you want to find an array of selected values in $_POST['yourfield'], $_GET['yourfield'] or $_REQUEST['yourfield'], you should render that field on the form like this: 'yourfield[]'. This will tell PHP that 'yourfield' is an array.
