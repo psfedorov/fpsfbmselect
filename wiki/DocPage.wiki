@@ -53,9 +53,9 @@ If you have provided 'variantsURL' parameter to the control, it will try to load
 
 {{{
 [
-    {'val': 1, 'title': 'One'},
-    {'val': 2, 'title': 'Two'},
-    {'val': 3, 'title': 'Three'}
+    {'value': 1, 'title': 'One'},
+    {'value': 2, 'title': 'Two'},
+    {'value': 3, 'title': 'Three'}
 ]
 }}}
 
