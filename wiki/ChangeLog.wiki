@@ -2,7 +2,7 @@
 
 = Change logs =
 
-== 1.0.5 ==
+== 1.0.5 (coming in a couple of days) ==
   * renamed 'cacheVariants' parameter to 'enableVariantCaching',
   * renamed 'userVariantFilter' parameter to 'enableVariantFilter',
   * renamed 'variantHTMLParser' parameter to 'variantHTMLRenderer',
