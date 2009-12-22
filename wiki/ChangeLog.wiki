@@ -9,7 +9,8 @@
   * added checking of dropdown height after adding of each element (to prevent box 'jumping' on big lists),
   * fixed some CSS properties,
   * fixed variant switching with arrow keys in Safari and Chrome,
-  * added match highlighting (can be turned on and off).
+  * added match highlighting (can be turned on and off),
+  * made demo page a little more informative.
 
 == 1.0 ==
 All of the basic functionality presents:
