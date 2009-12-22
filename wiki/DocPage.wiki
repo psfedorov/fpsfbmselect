@@ -79,3 +79,5 @@ Please, remember, that if you want to find an array of selected values in `$_POS
   * 'fps' are author's initials,
   * 'FB' means 'Facebook', where the original idea has been found,
   * 'MSelect' is 'multiselect'.
+
+You may also want to see the ChangeLog.
