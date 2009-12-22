@@ -1,6 +1,15 @@
-#summary Versions Changelogs
+#summary Versions change logs
 
 = Change logs =
+
+== 1.0.5 ==
+  * renamed 'cacheVariants' parameter to 'enableVariantCaching',
+  * renamed 'userVariantFilter' parameter to 'enableVariantFilter',
+  * renamed 'variantHTMLParser' parameter to 'variantHTMLRenderer',
+  * added checking of dropdown height after adding of each element (to prevent box 'jumping' on big lists),
+  * fixed some CSS properties,
+  * fixed variant switching with arrow keys in Safari and Chrome,
+  * added match highlighting (can be turned on and off).
 
 == 1.0 ==
 All of the basic functionality presents:
