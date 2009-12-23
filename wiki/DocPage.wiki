@@ -82,6 +82,8 @@ There are 4 types of objects that are being rendered:
   * 'systemValue' - a selected value, that came from your system and is being added to the values container,
   * 'userValue' - a selected value, that was entered by a user and is being added to the values container.
 
+Also note, that if user input is enabled, user variants will always have the default format: `{'value': '3', 'title': 'Three', 'orgn': 'user'}`.
+
 If you want to use a custom *function for filtering* variant list on the client side, pass it as the `'variantFilter'` parameter. The function takes the only argument - an array of variant objects, and returns also an array of this objects. You may access the value of text input from the method `$.fn.fpsFBMSelect.getTextInputValue()`.
 
 == Example usage in Django ==
