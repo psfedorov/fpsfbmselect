@@ -12,7 +12,7 @@ First, you need to include the files needed by the plugin:
 <script type="text/javascript" src="jquery.fpsfbmselect-1.0.5.js"></script>
 }}}
 
-Then you can add a control as easy as this:
+Then you can add the control as easy as this:
 
 {{{
 <div id="mycontrol"></div>
