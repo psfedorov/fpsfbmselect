@@ -72,7 +72,7 @@ The variant objects may also have another attribute - 'orgn' (that means 'origin
 If you use the default function for rendering HTML code of variants and values, then your variant objects should have this format: `{'value': '3', 'title': 'Three'}`. But if you want, for example, show image for every variant in dropdown box or show some additional info (not just plain text), then you can write your custom rendering function and pass it as the `variantHTMLRenderer` parameter, when you initialize the control.
 
 The *rendering function* should return a string (HTML code, which will be directly inserted in an element) and take 2 arguments:
-  * a variant object,
+  * variant object,
   * type of an object that is being rendered.
 So the format of variant object can be any of your choice, for example `{'person': 'John Doe', 'address': 'Unknown St., 1', 'value': '111'}`. The only required attribute is `'value'`.
 
