@@ -74,7 +74,7 @@ If you use the default function for rendering HTML code of variants and values, 
 The *rendering function* should return a string (HTML code, which will be directly inserted in an element) and take 2 arguments:
   * variant object,
   * type of an object that is being rendered.
-So the format of variant object can be any of your choice, for example `{'person': 'John Doe', 'address': 'Unknown St., 1', 'value': '111'}`. The only required attribute is `'value'`.
+So the format of variant object can be any of your choice, for example, `{'person': 'John Doe', 'address': 'Unknown St., 1', 'value': '111'}`. The only required attribute is `'value'`.
 
 There are 4 types of objects that are being rendered:
   * 'systemVariant' - an option for the dropdown box that came from your system,
