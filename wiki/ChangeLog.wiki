@@ -18,5 +18,5 @@ All of the basic functionality presents:
   * selecting values from a list of variants,
   * input of variants by a user,
   * limiting maximum amount of selected values,
-  * getting variant list from AJAX request or from local array
+  * getting variant list from AJAX request or from local array,
   * etc.
