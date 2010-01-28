@@ -55,9 +55,9 @@ If you have provided 'variantsURL' parameter to the control, it will try to load
 
 {{{
 [
-    {'value': 1, 'title': 'One'},
-    {'value': 2, 'title': 'Two'},
-    {'value': 3, 'title': 'Three'}
+    {"value": 1, "title": "One"},
+    {"value": 2, "title": "Two"},
+    {"value": 3, "title": "Three"}
 ]
 }}}
 
@@ -65,16 +65,16 @@ You may use as values not only integers, but strings too. That values will be pl
 
 Titles are shown to a user and used to render variants and selected values. They may contain not only plain text, but HTML code as well.
 
-The variant objects may also have another attribute - 'orgn' (that means 'origin'), which indicates whether a variant came from your system (when its value is 'sys') or from a user (when its value is 'user'). User and system variants will be shown slightly different. Also, if you have provided 'userFieldName' parameter to the control, then user variants will be inserted in hidden fields with that name.
+The variant objects may also have another attribute - `orgn` (that means "origin"), which indicates whether a variant came from your system (when its value is "sys") or from a user (when its value is "user"). User and system variants will be shown slightly different. Also, if you have provided 'userFieldName' parameter to the control, then user variants will be inserted in hidden fields with that name.
 
 == Custom functions for rendering and filtering values ==
 
-If you use the default function for rendering HTML code of variants and values, then your variant objects should have this format: `{'value': '3', 'title': 'Three'}`. But if you want, for example, show image for every variant in dropdown box or show some additional info (not just plain text), then you can write your custom rendering function and pass it as the `variantHTMLRenderer` parameter, when you initialize the control.
+If you use the default function for rendering HTML code of variants and values, then your variant objects should have this format: `{"value": "3", "title": "Three"}`. But if you want, for example, show image for every variant in dropdown box or show some additional info (not just plain text), then you can write your custom rendering function and pass it as the `variantHTMLRenderer` parameter, when you initialize the control.
 
 The *rendering function* should return a string (HTML code, which will be directly inserted in an element) and take 2 arguments:
   * variant object,
   * type of an object that is being rendered.
-So the format of variant object can be any of your choice, for example, `{'person': 'John Doe', 'address': 'Unknown St., 1', 'value': '111'}`. The only required attribute is `'value'`.
+So the format of variant object can be any of your choice, for example, `{"person": "John Doe", "address": "Unknown St., 1", "value": "111"}`. The only required attribute is `"value"`.
 
 There are 4 types of objects that are being rendered:
   * 'systemVariant' - an option for the dropdown box that came from your system,
@@ -82,7 +82,7 @@ There are 4 types of objects that are being rendered:
   * 'systemValue' - a selected value, that came from your system and is being added to the values container,
   * 'userValue' - a selected value, that was entered by a user and is being added to the values container.
 
-Also note, that if user input is enabled, user variants will always have the default format: `{'value': '3', 'title': 'Three', 'orgn': 'user'}`.
+Also note, that if user input is enabled, user variants will always have the default format: `{"value": "3", "title": "Three", "orgn": "user"}`.
 
 If you want to use a custom *function for filtering* variant list on the client side, pass it as the `'variantFilter'` parameter. The function takes the only argument - an array of variant objects, and returns also an array of this objects. You may access the value of text input from the method `$.fn.fpsFBMSelect.getTextInputValue()`.
 
