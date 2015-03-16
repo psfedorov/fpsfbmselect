@@ -1,0 +1,74 @@
+## Simple Django widget that uses fpsFBMSelect ##
+
+```
+# coding: utf-8
+
+# example of Django widget that uses fpsFBMSelect plugin for jQuery.
+
+"""
+In your views you'll do something like this:
+
+from django.forms import ChoiceField, Form
+from django_widget_example import MSelectWidget
+field = ChoiceField(
+    widget=MSelectWidget('/some/url/'),
+    initial=[[1, 'One'], [2, 'Two'], [3, 'Three']]
+)
+f = Form()
+f.fields['f'] = field
+context['f'] = f
+
+and then render a template using a 'context' dictionary.
+"""
+
+# to generate unique id for an element
+import uuid
+# base class for a widget
+from django.forms.widgets import SelectMultiple
+# classes needed for rendering
+from django.template import Context, Template
+
+
+class MSelectWidget(SelectMultiple):
+    """
+    Simple widget that uses fpsFBMSelect plugin for jQuery
+    """
+    
+    # most likely, you'll want to keep this template code in a separate file
+    template_str = u"""
+        <div id="{{ elem_id }}"></div>
+        <script type="text/javascript">
+            $('#{{ elem_id }}').fpsFBMSelect({
+                'fieldName': '{{ field_name }}',
+                'variantsURL': '{{ variants_url }}',
+                'selectedValues': [
+                    {% for choice in choices %}
+                        {'value': '{{ choice.0 }}', 'title': '{{ choice.1 }}'}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                ],
+                'enableUserInput': true
+            });
+        </script>
+    """
+    
+    def __init__(self, variantsURL, attrs=None, choices=[]):
+        """
+        In the 'variantsURL' comes an URL for retrieving variants with ajax requests.
+        """
+        super(MSelectWidget, self).__init__(attrs, choices)
+        self.variantsURL = variantsURL
+    
+    def render(self, name, value, attrs=None, choices=[]):
+        """
+        In the 'name' argument comes a field name,
+        in 'value' - list of selected values.
+        """
+        template = Template(self.template_str)
+        context = Context({
+            'elem_id': uuid.uuid4(),
+            'field_name': name,
+            'variants_url': self.variantsURL,
+            'choices': value,
+        })
+        return template.render(context)
+```
